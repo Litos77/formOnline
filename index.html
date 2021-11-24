@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Assingment</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Contact Us</h1>
+    </header>
+
+    <main>
+      <form action="/project7/" method="POST">
+        <section>
+          <h2>How can we help you?</h2>
+          <ul>
+            <li>
+              <label for="username">Your Name</label>
+              <input type="text" name="username" id="username" required />
+            </li>
+            <li>
+              <label for="useremail">Your E-Mail Address</label>
+              <input type="email" name="useremail" id="useremail" required />
+            </li>
+            <li>
+              <label for="userphone">Your Phone Number</label>
+              <input
+                type="tel"
+                name="userPhone"
+                id="userphone"
+                required
+                minlength="5"
+              />
+            </li>
+            <li>
+              <label for="usermessage">Your Message</label>
+              <textarea
+                name="userMessage"
+                id="usermessage"
+                required
+                minlength="10"
+                maxlength="200"
+                rows="6"
+              ></textarea>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <label for="channel">How did you find us?</label>
+          <select name="channel" id="channel" required>
+            <option value="websearch">Web Search</option>
+            <option value="newsletter">Newsletter</option>
+            <option value="other">Other</option>
+          </select>
+        </section>
+
+        <section>
+          <h2>How should we reply?</h2>
+          <ul>
+            <li class="inline-control">
+              <input type="radio" name="contact" id="callMe" required />
+              <label for="callMe">Call me</label>
+            </li>
+          </ul>
+          <ul>
+            <li class="inline-control">
+              <input type="radio" name="contact" id="email" required />
+              <label for="email">Send me an email</label>
+            </li>
+          </ul>
+          <ul>
+            <li class="inline-control">
+              <input type="radio" name="contact" id="noReply" required />
+              <label for="noReply">Don't reply</label>
+            </li>
+          </ul>
+        </section>
+
+        <section class="inline-control">
+          <input
+            type="checkbox"
+            name="accept-terms"
+            id="accept-terms"
+            required
+          />
+          <label for="accept-terms">Accept Terms</label>
+        </section>
+
+        <section id="form-actions">
+          <button type="reset" class="btn-empty">Clear</button>
+          <button type="submit" class="btn-filled">Submit</button>
+        </section>
+      </form>
+    </main>
+  </body>
+</html>
